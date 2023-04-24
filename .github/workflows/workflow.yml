@@ -27,13 +27,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Docker image
-        run: docker build -t imagem-melicia_mendez_devops:latest .
+        run: docker build -t imagem-melicia_mendez_devops:latest
 
-      - name: Run 
-        run: docker run -t -d -p 8000:80 imagem-melicia_mendez_devops:latest
-      
+      - name: Tag
+        run: docker tag imagem-melicia_mendez_devops:latest meliciatenis/imagem-melicia_mendez_devops:teste
+        
       - name: Push Docker image to Docker Hub
-        run: docker push meliciatenis/imagem-melicia_mendez_devops:latest
+        run: docker push meliciatenis/imagem-melicia_mendez_devops:teste
 
   deploy-job:
     needs: [test-job]
