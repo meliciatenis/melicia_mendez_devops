@@ -1,0 +1,5 @@
+version: "3.9"
+services:
+  my-service:
+    build: .
+    image: meliciatenisimagem-melicia_mendez_devops/myrepo:latest
