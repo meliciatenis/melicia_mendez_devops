@@ -1,14 +1,8 @@
-FROM ubuntu:latest
+FROM nginx:alpine
 
-RUN apt-get update
-RUN apt-get install nginx -y
-
-RUN mkdir /app
-WORKDIR /app
-
-COPY index.html /var/www/html
-COPY style.css /var/www/html
-COPY script.js /var/www/html
+COPY index.html /usr/share/nginx/html
+COPY style.css /usr/share/nginx/html
+COPY script.js /usr/share/nginx/html
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
