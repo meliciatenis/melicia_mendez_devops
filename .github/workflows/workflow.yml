@@ -23,7 +23,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/compose-action@v2
         with:
-          compose-file: docker-compose.yml
+          compose-file: docker_compose.yml
           services: my-service
           command: push
         env:
