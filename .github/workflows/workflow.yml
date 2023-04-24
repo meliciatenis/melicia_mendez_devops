@@ -28,9 +28,12 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t imagem-melicia_mendez_devops:latest .
+
+      - name: Run 
+        run: docker run -t -d -p 8000:80 imagem-melicia_mendez_devops:latest
       
       - name: Push Docker image to Docker Hub
-        run: docker push meliciatenis/imagem-melicia_mendez_devops:latest
+        run: docker push meliciatenis/imagem-melicia_mendez_devops
 
   deploy-job:
     needs: [test-job]
