@@ -33,7 +33,7 @@ jobs:
         run: docker run -t -d -p 8000:80 imagem-melicia_mendez_devops:latest
       
       - name: Push Docker image to Docker Hub
-        run: docker push meliciatenis/imagem-melicia_mendez_devops
+        run: docker push meliciatenis/imagem-melicia_mendez_devops:latest
 
   deploy-job:
     needs: [test-job]
