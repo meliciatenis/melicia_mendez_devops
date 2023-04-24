@@ -28,7 +28,7 @@ jobs:
         
       - name: Push Docker image to Docker Hub
         run: |
-          docker login -u meliciatenis -p ${{ secrets.DOCKER_PASSWORD }} docker.io && 
+          docker login --username meliciatenis --password ${{ secrets.DOCKER_PASSWORD }} docker.io && 
           docker push meliciatenis/imagem-melicia_mendez_devops:teste
 
   deploy-job:
