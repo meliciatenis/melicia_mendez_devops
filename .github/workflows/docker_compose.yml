@@ -1,5 +1,0 @@
-version: "3.9"
-services:
-  my-service:
-    build: .
-    image: meliciatenis/imagem-melicia_mendez_devops:latest
