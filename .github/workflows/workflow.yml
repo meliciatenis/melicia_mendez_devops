@@ -33,7 +33,7 @@ jobs:
         run: docker push meliciatenis/imagem-melicia_mendez_devops:teste
 
   deploy-job:
-    needs: [test-job]
+ 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout del repositorio
