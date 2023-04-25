@@ -21,6 +21,14 @@ jobs:
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v2
+      - name: Executar análise de segurança estática
+        uses: AppThreat/sast-scan-action@master
+        with:
+          target: index.html, script.js, 
+          report_type: summary
+          severities: high, medium
+        env:
+          RISK_LEVEL: '10'
 
       - uses: AppThreat/sast-scan-action@master
 
